@@ -16,10 +16,13 @@ import itertools
  2    27    75 78    82
    41 56 61     76      86
 --------------------------
-В игре 2 игрока: пользователь и компьютер. Каждому в начале выдается случайная карточка.
+В игре произвольное количество игроков (было: В игре 2 игрока: пользователь и компьютер). 
+Типы игроков 'Человек' или 'Компьютер' 
+Каждому в начале выдается случайная карточка.
+
 
 Каждый ход выбирается один случайный бочонок и выводится на экран. 
-Также выводятся карточка игрока и карточка компьютера.
+Также выводятся карточки игроков (было: игрока и карточка компьютера).
 
 Пользователю предлагается зачеркнуть цифру на карточке или продолжить.
 
@@ -155,22 +158,22 @@ class Card:
         print('-' * 26)
 
 
-if __name__ == "__main__":
-    player_Ivan = Player(1, 'Человек', 'Иван')
-    # print(player_Ivan.number)
-    # print(player_Ivan.type)
-    # print(player_Ivan.name)
-    #
-    player_Sam = Player(2, 'Человек', 'Sam')
-    # print(player_Sam.number)
-    # print(player_Sam.type)
-    # print(player_Sam.name)
-
-    test_card = Card('Наталья')
-    card_rows_all = test_card.draw_card()
-    test_card.card_presentation(card_rows_all)
-    card_rows_all = test_card.card_correction(range(1, 50), card_rows_all)
-    test_card.card_presentation(card_rows_all)
+# if __name__ == "__main__":
+#     player_Ivan = Player(1, 'Человек', 'Иван')
+#     # print(player_Ivan.number)
+#     # print(player_Ivan.type)
+#     # print(player_Ivan.name)
+#     #
+#     player_Sam = Player(2, 'Человек', 'Sam')
+#     # print(player_Sam.number)
+#     # print(player_Sam.type)
+#     # print(player_Sam.name)
+#
+#     test_card = Card('Наталья')
+#     card_rows_all = test_card.draw_card()
+#     test_card.card_presentation(card_rows_all)
+#     card_rows_all = test_card.card_correction(range(1, 50), card_rows_all)
+#     test_card.card_presentation(card_rows_all)
 
 
 
