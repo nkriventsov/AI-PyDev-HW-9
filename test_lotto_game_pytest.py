@@ -30,7 +30,8 @@ def test_number_of_players():
     with mock.patch('builtins.input', return_value=2):
         assert number_of_players() == 2
 
-    #TODO: Пункт 4 в вопросах
+    #
+
     # with pytest.raises(ValueError):
     #     number_of_players()
 

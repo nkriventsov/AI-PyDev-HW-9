@@ -4,6 +4,7 @@ from lotto_game import Player, Card
 from random import sample
 from contextlib import redirect_stdout
 from io import StringIO
+import copy     # Для копирования какого-либо объекта
 
 
 
@@ -22,11 +23,12 @@ class TestCard(unittest.TestCase):
         initial_card_rows_all = None
         test_card = Card('Test')
         card_rows_all = test_card.draw_card()
-        # TODO: Пункт 1 в вопросах
-        # initial_card_rows_all = card_rows_all
+        # копия значений объекта card_rows_all
+        initial_card_rows_all = copy.deepcopy(card_rows_all)
         keg_number = list(set(card_rows_all[0]))[1]
         corrected_card = test_card.card_correction(keg_number, card_rows_all)
         self.assertFalse(any(item == keg_number for item in corrected_card[0]))
+        self.assertFalse(corrected_card == initial_card_rows_all)
 
     def test_card_presentation(self):
         test_card = Card('Test')

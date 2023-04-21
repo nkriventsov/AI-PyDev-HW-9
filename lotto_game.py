@@ -80,6 +80,7 @@ class Card:
     def __init__(self, owner):
         self.owner = owner
 
+
     def draw_card(self):
         # Генерация чисел на новой карточке
         new_card_draw = random.sample(range(1, 91), k=15)
